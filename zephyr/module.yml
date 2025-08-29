@@ -1,7 +1,1 @@
-name: zmk-keyboard-numpad-3x3
-build:
-  cmake: .
-  kconfig: Kconfig
-  board_root: config
-  dts_root: config
-  shield_root: config
+ 
