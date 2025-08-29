@@ -1,0 +1,6 @@
+if SHIELD_NUMPAD_3X3
+
+config ZMK_KEYBOARD_NAME
+    default "Numpad 3x3"
+
+endif
