@@ -2,6 +2,7 @@ name: zmk-config
 build:
   cmake: .
   kconfig: Kconfig
-  board_root: .
-  dts_root: .
-  shield_root: .
+  settings:
+    board_root: .
+    dts_root: .
+    shield_root: .
