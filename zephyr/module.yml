@@ -1,3 +1,7 @@
+name: zmk-config
 build:
-  settings:
-    board_root: .
+  cmake: .
+  kconfig: Kconfig
+  board_root: .
+  dts_root: .
+  shield_root: .
