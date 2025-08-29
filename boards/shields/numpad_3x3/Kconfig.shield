@@ -1,2 +1,0 @@
-config SHIELD_NUMPAD_3X3
-    def_bool $(shields_list_contains,numpad_3x3)
