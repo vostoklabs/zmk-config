@@ -11,7 +11,7 @@
         };
         layer_toggle_combo {
             timeout-ms = <50>;
-            key-positions = <0 1>; // A (position 0) and B (position 1)
+            key-positions = <0 1>; // 1 (position 0) and 2 (position 1)
             bindings = <&tog 1>;
         };
     };
@@ -20,22 +20,17 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            display-name = "Default";
-            bindings = <
-                &kp A   &kp B   &kp C
-                &kp D   &kp E   &kp F
-                &kp G   &kp H   &kp I
-            >;
-        };
-
-        // Second layer with numbers
-        layer_1 {
             display-name = "Numbers";
             bindings = <
                 &kp N1   &kp N2   &kp N3
                 &kp N4   &kp N5   &kp N6
                 &kp N7   &kp N8   &kp N9
             >;
+        };
+
+        // Reserved layers for ZMK Studio
+        extra1 {
+            status = "reserved";
         };
 
         extra2 {
