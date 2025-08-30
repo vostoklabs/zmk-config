@@ -5,18 +5,24 @@
     combos {
         compatible = "zmk,combos";
         studio_unlock_combo {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <2 5>; // C (position 2) and F (position 5)
             bindings = <&studio_unlock>;
         };
+        // Test combo - press 7+8 to send 'X' to verify combos work
+        test_combo {
+            timeout-ms = <200>;
+            key-positions = <6 7>; // 7 (position 6) and 8 (position 7)
+            bindings = <&kp X>;
+        };
         numbers_to_letters_combo {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <0 1>; // 1 (position 0) and 2 (position 1)
             bindings = <&tog 1>;
             layers = <0>; // Only active on numbers layer
         };
         letters_to_numbers_combo {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <0 1>; // A (position 0) and B (position 1) - same physical keys
             bindings = <&tog 1>;
             layers = <1>; // Only active on letters layer
