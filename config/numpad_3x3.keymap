@@ -2,15 +2,34 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        studio_unlock_combo {
+            timeout-ms = <50>;
+            key-positions = <2 5>; // C (position 2) and F (position 5)
+            bindings = <&studio_unlock>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "Default";
             bindings = <
                 &kp A   &kp B   &kp C
                 &kp D   &kp E   &kp F
                 &kp G   &kp H   &kp I
             >;
+        };
+
+        // Reserved layers for ZMK Studio
+        extra1 {
+            status = "reserved";
+        };
+
+        extra2 {
+            status = "reserved";
         };
     };
 };
