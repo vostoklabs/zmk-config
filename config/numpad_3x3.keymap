@@ -9,6 +9,11 @@
             key-positions = <2 5>; // C (position 2) and F (position 5)
             bindings = <&studio_unlock>;
         };
+        layer_toggle_combo {
+            timeout-ms = <50>;
+            key-positions = <0 1>; // A (position 0) and B (position 1)
+            bindings = <&tog 1>;
+        };
     };
 
     keymap {
@@ -23,9 +28,14 @@
             >;
         };
 
-        // Reserved layers for ZMK Studio
-        extra1 {
-            status = "reserved";
+        // Second layer with numbers
+        layer_1 {
+            display-name = "Numbers";
+            bindings = <
+                &kp N1   &kp N2   &kp N3
+                &kp N4   &kp N5   &kp N6
+                &kp N7   &kp N8   &kp N9
+            >;
         };
 
         extra2 {
