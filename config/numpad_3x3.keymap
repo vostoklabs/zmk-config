@@ -12,29 +12,11 @@
             key-positions = <2 5>; // C (position 2) and F (position 5)
             bindings = <&studio_unlock>;
         };
-        // Test combo - press 7+8 to send 'X' to verify combos work
-        test_combo {
-            timeout-ms = <200>;
-            key-positions = <6 7>; // 7 (position 6) and 8 (position 7)
-            bindings = <&kp X>;
-        };
-        // Diagnostic test - press 4+5 to send 'Y' using &tog behavior
-        diagnostic_combo {
-            timeout-ms = <200>;
-            key-positions = <3 4>; // 4 (position 3) and 5 (position 4)
-            bindings = <&tog 1>;
-        };
-        numbers_to_letters {
+        // Press 1+2 to toggle between numbers and letters layers
+        layer_toggle {
             timeout-ms = <200>;
             key-positions = <0 1>; // 1 (position 0) and 2 (position 1)
-            bindings = <&to ABC>;
-            layers = <BASE>; // Only active on layer 0 (numbers)
-        };
-        letters_to_numbers {
-            timeout-ms = <200>;
-            key-positions = <0 1>; // A (position 0) and B (position 1) 
-            bindings = <&to BASE>;
-            layers = <ABC>; // Only active on layer 1 (letters)
+            bindings = <&tog ABC>;
         };
     };
 
@@ -46,7 +28,7 @@
             bindings = <
                 &kp N1   &kp N2   &kp N3
                 &kp N4   &kp N5   &kp N6
-                &kp N7   &kp N8   &tog 1
+                &kp N7   &kp N8   &kp N9
             >;
         };
 
@@ -55,7 +37,7 @@
             bindings = <
                 &kp A    &kp B    &kp C
                 &kp D    &kp E    &kp F
-                &kp G    &kp H    &kp Z
+                &kp G    &kp H    &kp I
             >;
         };
 
