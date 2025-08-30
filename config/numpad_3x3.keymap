@@ -1,6 +1,9 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define BASE 0
+#define ABC  1
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -24,14 +27,14 @@
         numbers_to_letters {
             timeout-ms = <200>;
             key-positions = <0 1>; // 1 (position 0) and 2 (position 1)
-            bindings = <&tog 1>;
-            layers = <0>; // Only active on layer 0 (numbers)
+            bindings = <&to ABC>;
+            layers = <BASE>; // Only active on layer 0 (numbers)
         };
         letters_to_numbers {
             timeout-ms = <200>;
             key-positions = <0 1>; // A (position 0) and B (position 1) 
-            bindings = <&tog 1>;
-            layers = <1>; // Only active on layer 1 (letters)
+            bindings = <&to BASE>;
+            layers = <ABC>; // Only active on layer 1 (letters)
         };
     };
 
