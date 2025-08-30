@@ -15,6 +15,12 @@
             key-positions = <6 7>; // 7 (position 6) and 8 (position 7)
             bindings = <&kp X>;
         };
+        // Diagnostic test - press 4+5 to send 'Y' using &tog behavior
+        diagnostic_combo {
+            timeout-ms = <200>;
+            key-positions = <3 4>; // 4 (position 3) and 5 (position 4)
+            bindings = <&tog 1>;
+        };
         numbers_to_letters {
             timeout-ms = <200>;
             key-positions = <0 1>; // 1 (position 0) and 2 (position 1)
@@ -46,7 +52,7 @@
             bindings = <
                 &kp A    &kp B    &kp C
                 &kp D    &kp E    &kp F
-                &kp G    &kp H    &tog 1
+                &kp G    &kp H    &kp Z
             >;
         };
 
