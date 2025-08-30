@@ -15,17 +15,10 @@
             key-positions = <6 7>; // 7 (position 6) and 8 (position 7)
             bindings = <&kp X>;
         };
-        numbers_to_letters_combo {
+        simple_layer_toggle {
             timeout-ms = <200>;
             key-positions = <0 1>; // 1 (position 0) and 2 (position 1)
             bindings = <&tog 1>;
-            layers = <0>; // Only active on numbers layer
-        };
-        letters_to_numbers_combo {
-            timeout-ms = <200>;
-            key-positions = <0 1>; // A (position 0) and B (position 1) - same physical keys
-            bindings = <&tog 1>;
-            layers = <1>; // Only active on letters layer
         };
     };
 
@@ -37,7 +30,7 @@
             bindings = <
                 &kp N1   &kp N2   &kp N3
                 &kp N4   &kp N5   &kp N6
-                &kp N7   &kp N8   &kp N9
+                &kp N7   &kp N8   &tog 1
             >;
         };
 
@@ -46,7 +39,7 @@
             bindings = <
                 &kp A    &kp B    &kp C
                 &kp D    &kp E    &kp F
-                &kp G    &kp H    &kp I
+                &kp G    &kp H    &tog 1
             >;
         };
 
