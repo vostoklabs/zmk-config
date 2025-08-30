@@ -9,10 +9,17 @@
             key-positions = <2 5>; // C (position 2) and F (position 5)
             bindings = <&studio_unlock>;
         };
-        layer_toggle_combo {
+        numbers_to_letters_combo {
             timeout-ms = <50>;
             key-positions = <0 1>; // 1 (position 0) and 2 (position 1)
             bindings = <&tog 1>;
+            layers = <0>; // Only active on numbers layer
+        };
+        letters_to_numbers_combo {
+            timeout-ms = <50>;
+            key-positions = <0 1>; // A (position 0) and B (position 1) - same physical keys
+            bindings = <&tog 1>;
+            layers = <1>; // Only active on letters layer
         };
     };
 
@@ -25,6 +32,15 @@
                 &kp N1   &kp N2   &kp N3
                 &kp N4   &kp N5   &kp N6
                 &kp N7   &kp N8   &kp N9
+            >;
+        };
+
+        letters_layer {
+            display-name = "Letters";
+            bindings = <
+                &kp A    &kp B    &kp C
+                &kp D    &kp E    &kp F
+                &kp G    &kp H    &kp I
             >;
         };
 
