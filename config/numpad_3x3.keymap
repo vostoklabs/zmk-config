@@ -5,7 +5,9 @@
 
 #define BASE 0
 #define ABC  1
-#define BT   2
+#define SYM  2
+#define FUN  3
+#define BT   4
 
 / {
     behaviors {
@@ -15,7 +17,7 @@
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
-            bindings = <&mo>, <&tog>;
+            bindings = <&mo>, <&to>;
         };
     };
 
@@ -34,20 +36,40 @@
         default_layer {
             display-name = "Numbers";
             bindings = <
-                &layer_ht BT ABC
                 &kp N1   &kp N2   &kp N3
                 &kp N4   &kp N5   &kp N6
                 &kp N7   &kp N8   &kp N9
+                &layer_ht BT ABC
             >;
         };
 
         letters_layer {
             display-name = "Letters";
             bindings = <
-                &layer_ht BT BASE
                 &kp A    &kp B    &kp C
                 &kp D    &kp E    &kp F
                 &kp G    &kp H    &kp I
+                &layer_ht BT SYM
+            >;
+        };
+
+        symbols_layer {
+            display-name = "Symbols";
+            bindings = <
+                &kp EXCL   &kp AT     &kp HASH
+                &kp DLLR   &kp PRCNT  &kp CARET
+                &kp AMPS   &kp STAR   &kp LPAR
+                &layer_ht BT FUN
+            >;
+        };
+
+        function_layer {
+            display-name = "Function";
+            bindings = <
+                &kp F1   &kp F2   &kp F3
+                &kp F4   &kp F5   &kp F6
+                &kp F7   &kp F8   &kp F9
+                &layer_ht BT BASE
             >;
         };
 
