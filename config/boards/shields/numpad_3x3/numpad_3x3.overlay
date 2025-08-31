@@ -86,7 +86,6 @@
     oled: ssd1306@3d {
         compatible = "solomon,ssd1306fb";
         reg = <0x3d>;
-        label = "SSD1306";
         width = <128>;
         height = <32>;
         segment-offset = <0>;
