@@ -9,13 +9,13 @@
         compatible = "zmk,combos";
         studio_unlock_combo {
             timeout-ms = <200>;
-            key-positions = <2 5>; // C (position 2) and F (position 5)
+            key-positions = <0 8>; // 1+9 (corners) or A+I (corners)
             bindings = <&studio_unlock>;
         };
         // Press 1+2 to toggle between numbers and letters layers
         layer_toggle {
             timeout-ms = <200>;
-            key-positions = <0 1>; // 1 (position 0) and 2 (position 1)
+            key-positions = <0 1>; // 1+2 (numbers) or A+B (letters)
             bindings = <&tog ABC>;
         };
     };
@@ -29,6 +29,7 @@
                 &kp N1   &kp N2   &kp N3
                 &kp N4   &kp N5   &kp N6
                 &kp N7   &kp N8   &kp N9
+                &kp N0
             >;
         };
 
@@ -38,6 +39,7 @@
                 &kp A    &kp B    &kp C
                 &kp D    &kp E    &kp F
                 &kp G    &kp H    &kp I
+                &kp SPACE
             >;
         };
 
