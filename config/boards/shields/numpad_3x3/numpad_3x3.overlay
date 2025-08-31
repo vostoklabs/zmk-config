@@ -30,7 +30,15 @@
         compatible = "zmk,kscan-composite";
         rows = <4>;
         columns = <3>;
-        kscan = <&kscan0>, <&kscan_direct>;
+
+        matrix {
+            kscan = <&kscan0>;
+        };
+
+        direct {
+            kscan = <&kscan_direct>;
+            row-offset = <3>;
+        };
     };
 
     default_transform: default_transform {
