@@ -1,0 +1,67 @@
+[1mdiff --git a/config/numpad_3x3.keymap b/config/numpad_3x3.keymap[m
+[1mindex b84ce6e..affaa49 100644[m
+[1m--- a/config/numpad_3x3.keymap[m
+[1m+++ b/config/numpad_3x3.keymap[m
+[36m@@ -5,7 +5,9 @@[m
+ [m
+ #define BASE 0[m
+ #define ABC  1[m
+[31m-#define BT   2[m
+[32m+[m[32m#define SYM  2[m
+[32m+[m[32m#define FUN  3[m
+[32m+[m[32m#define BT   4[m
+ [m
+ / {[m
+     behaviors {[m
+[36m@@ -15,7 +17,7 @@[m
+             flavor = "tap-preferred";[m
+             tapping-term-ms = <200>;[m
+             quick-tap-ms = <150>;[m
+[31m-            bindings = <&mo>, <&tog>;[m
+[32m+[m[32m            bindings = <&mo>, <&to>;[m
+         };[m
+     };[m
+ [m
+[36m@@ -34,20 +36,40 @@[m
+         default_layer {[m
+             display-name = "Numbers";[m
+             bindings = <[m
+[31m-                &layer_ht BT ABC[m
+                 &kp N1   &kp N2   &kp N3[m
+                 &kp N4   &kp N5   &kp N6[m
+                 &kp N7   &kp N8   &kp N9[m
+[32m+[m[32m                &layer_ht BT ABC[m
+             >;[m
+         };[m
+ [m
+         letters_layer {[m
+             display-name = "Letters";[m
+             bindings = <[m
+[31m-                &layer_ht BT BASE[m
+                 &kp A    &kp B    &kp C[m
+                 &kp D    &kp E    &kp F[m
+                 &kp G    &kp H    &kp I[m
+[32m+[m[32m                &layer_ht BT SYM[m
+[32m+[m[32m            >;[m
+[32m+[m[32m        };[m
+[32m+[m
+[32m+[m[32m        symbols_layer {[m
+[32m+[m[32m            display-name = "Symbols";[m
+[32m+[m[32m            bindings = <[m
+[32m+[m[32m                &kp EXCL   &kp AT     &kp HASH[m
+[32m+[m[32m                &kp DLLR   &kp PRCNT  &kp CARET[m
+[32m+[m[32m                &kp AMPS   &kp STAR   &kp LPAR[m
+[32m+[m[32m                &layer_ht BT FUN[m
+[32m+[m[32m            >;[m
+[32m+[m[32m        };[m
+[32m+[m
+[32m+[m[32m        function_layer {[m
+[32m+[m[32m            display-name = "Function";[m
+[32m+[m[32m            bindings = <[m
+[32m+[m[32m                &kp F1   &kp F2   &kp F3[m
+[32m+[m[32m                &kp F4   &kp F5   &kp F6[m
+[32m+[m[32m                &kp F7   &kp F8   &kp F9[m
+[32m+[m[32m                &layer_ht BT BASE[m
+             >;[m
+         };[m
+ [m
